@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on prajjwal.fyi</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://prajjwal.fyi/tags/</link>
     <description>Recent content in Tags on prajjwal.fyi</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Sep 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://prajjwal.fyi/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basics</title>
-      <link>http://localhost:1313/tags/basics/</link>
+      <link>https://prajjwal.fyi/tags/basics/</link>
       <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/basics/</guid>
+      <guid>https://prajjwal.fyi/tags/basics/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>http://localhost:1313/tags/networking/</link>
+      <link>https://prajjwal.fyi/tags/networking/</link>
       <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/networking/</guid>
+      <guid>https://prajjwal.fyi/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech</title>
-      <link>http://localhost:1313/tags/tech/</link>
+      <link>https://prajjwal.fyi/tags/tech/</link>
       <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tech/</guid>
+      <guid>https://prajjwal.fyi/tags/tech/</guid>
       <description></description>
     </item>
   </channel>

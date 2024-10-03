@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basics on prajjwal.fyi</title>
-    <link>http://localhost:1313/tags/basics/</link>
+    <link>https://prajjwal.fyi/tags/basics/</link>
     <description>Recent content in Basics on prajjwal.fyi</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Sep 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/basics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://prajjwal.fyi/tags/basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What Happens After Entering an URL on Your Browser?</title>
-      <link>http://localhost:1313/posts/how-web-works/</link>
+      <link>https://prajjwal.fyi/posts/how-web-works/</link>
       <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-web-works/</guid>
+      <guid>https://prajjwal.fyi/posts/how-web-works/</guid>
       <description>An overview of the client-server model, DNS, HTTP, and HTTPS protocols with details about how your browser processes web requests.</description>
     </item>
   </channel>
