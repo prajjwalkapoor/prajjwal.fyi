@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on prajjwal.fyi</title>
-    <link>https://prajjwal.fyi/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on prajjwal.fyi</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Sep 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://prajjwal.fyi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What Happens After Entering an URL on Your Browser?</title>
-      <link>https://prajjwal.fyi/posts/how-web-works/</link>
+      <link>http://localhost:1313/posts/how-web-works/</link>
       <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://prajjwal.fyi/posts/how-web-works/</guid>
+      <guid>http://localhost:1313/posts/how-web-works/</guid>
       <description>An overview of the client-server model, DNS, HTTP, and HTTPS protocols with details about how your browser processes web requests.</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://prajjwal.fyi/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prajjwal.fyi/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I’m Prajjwal Kapoor, a Software Engineer from India 🇮🇳. I’m passionate about building products that help people and make their lives easier.&lt;/p&gt;&#xA;&lt;p&gt;Reach out to me at &lt;a href=&#34;mailto:hi.prajjwalkapoor@gmail.com&#34;&gt;hi.prajjwalkapoor@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;h3 id=&#34;software-engineering-intern-at-adobe&#34;&gt;Software Engineering Intern at Adobe&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Noida, India&lt;br&gt;&#xA;&lt;strong&gt;Duration:&lt;/strong&gt; May, 2024 – July 2024&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Assisted in Implementing an AB Testing Framework using Javascript, React, Adobe Target, Adobe Analytics.&lt;/li&gt;&#xA;&lt;li&gt;Worked on the marketing tech of Acrobat Web team to create and implement robust AB testing framework that can test&#xA;different experiences on users and generate analytics and insights of those.&lt;/li&gt;&#xA;&lt;li&gt;Contributed to the overall architecture design and development process.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;software-engineering-intern-at-aeroliftai&#34;&gt;Software Engineering Intern at Aerolift.AI&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Remote, San Jose, California&lt;br&gt;&#xA;&lt;strong&gt;Duration:&lt;/strong&gt; Feb, 2024 – May 2024&lt;/p&gt;</description>
     </item>
   </channel>

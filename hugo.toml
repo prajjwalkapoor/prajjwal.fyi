@@ -22,6 +22,7 @@ hideHeader = false
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
 I’m Prajjwal Kapoor, a Software Engineer from India 🇮🇳. I’m passionate about building products that help people and make their lives easier.
+\nFeel free to read [about me](/about) or to look at my [posts](/posts).
 """
 
 # Collection to display on home
