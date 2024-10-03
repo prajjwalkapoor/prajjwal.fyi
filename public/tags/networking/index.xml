@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on prajjwal.fyi</title>
+    <link>https://prajjwal.fyi/tags/networking/</link>
+    <description>Recent content in Networking on prajjwal.fyi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://prajjwal.fyi/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens After Entering an URL on Your Browser?</title>
+      <link>https://prajjwal.fyi/posts/how-web-works/</link>
+      <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://prajjwal.fyi/posts/how-web-works/</guid>
+      <description>An overview of the client-server model, DNS, HTTP, and HTTPS protocols with details about how your browser processes web requests.</description>
+    </item>
+  </channel>
+</rss>

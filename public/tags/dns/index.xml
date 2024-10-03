@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNS on prajjwal.fyi</title>
+    <link>http://localhost:1313/tags/dns/</link>
+    <description>Recent content in DNS on prajjwal.fyi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens After Entering www.google.com on Your Browser?</title>
+      <link>http://localhost:1313/posts/how-web-works/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-web-works/</guid>
+      <description>An overview of the client-server model, DNS, HTTP, and HTTPS protocols with details about how your browser processes web requests.</description>
+    </item>
+  </channel>
+</rss>

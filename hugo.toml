@@ -1,0 +1,82 @@
+baseURL = 'https://prajjwal.fyi/'
+languageCode = 'en-us'
+title = 'prajjwal.fyi'
+theme = 'typo'
+
+[taxonomies]
+tag = 'tags'
+
+# Google analytics code
+googleAnalytics = "G-HPV57DX9GE"
+
+[params]
+# Meta description
+description = "Personal blog of Prajjwal Kapoor, a Software Engineer with a passion for solving problems IRL."
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Hi!'
+homeIntroContent = """
+I’m Prajjwal Kapoor, a Software Engineer from India 🇮🇳. I’m passionate about building products that help people and make their lives easier.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Recent Blogs'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/prajjwal-kapoor/"
+
+[[params.social]]
+name = "x"
+url = "https://x.com/the_prajjwal"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/prajjwalkapoor"
+
+[[params.social]]
+name = "email"
+url = "mailto:hi.prajjwalkapoor@gmail.com"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "blogs"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"

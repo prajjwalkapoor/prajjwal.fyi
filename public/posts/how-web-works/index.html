@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="https://prajjwal.fyi//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://prajjwal.fyi//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://prajjwal.fyi//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://prajjwal.fyi//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://prajjwal.fyi//apple-touch-icon.png">
+
+<meta name="description" content="This post explains the behind-the-scenes process that occurs when a user enters a website URL, including the role of the client-server model, DNS, HTTP, HTTPS, and how data is securely transmitted."/>
+
+<title>
+    
+    What Happens After Entering an URL on Your Browser? | prajjwal.fyi
+    
+</title>
+
+<link rel="canonical" href="https://prajjwal.fyi/posts/how-web-works/"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.a6824bbee0d90d5af09fed9b70395ce7076b615e315037455d903314e96ef91b.css" media="all">
+
+
+
+
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">prajjwal.fyi</h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /blogs
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/how-web-works/">What Happens After Entering an URL on Your Browser?</a>
+</div>
+
+
+
+<div  class="autonumber" >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">What Happens After Entering an URL on Your Browser?</h1>
+    
+    <p class="single-summary">An overview of the client-server model, DNS, HTTP, and HTTPS protocols with details about how your browser processes web requests.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2022-09-25T00:00:00&#43;00:00">September 25, 2022</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      5 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+  
+
+  <div class="single-tags">
+    
+    <span>
+      <a href="https://prajjwal.fyi/tags/networking/">#Networking</a>
+    </span>
+    
+    
+    <span>
+      <a href="https://prajjwal.fyi/tags/tech/">#Tech</a>
+    </span>
+    
+    
+    <span>
+      <a href="https://prajjwal.fyi/tags/basics/">#Basics</a>
+    </span>
+    
+    
+  </div>
+
+  
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-client-server-model">The Client-Server Model</a></li>
+    <li><a href="#domain-name-system-dns">Domain Name System (DNS)</a></li>
+    <li><a href="#http-hypertext-transfer-protocol">HTTP (HyperText Transfer Protocol)</a>
+      <ul>
+        <li><a href="#http-headers">HTTP Headers</a></li>
+        <li><a href="#http-request-methods">HTTP Request Methods</a></li>
+        <li><a href="#http-status-codes">HTTP Status Codes</a></li>
+        <li><a href="#http-request-and-response-body">HTTP Request and Response Body</a></li>
+      </ul>
+    </li>
+    <li><a href="#https-hypertext-transfer-protocol-secure">HTTPS (HyperText Transfer Protocol Secure)</a>
+      <ul>
+        <li><a href="#what-is-https">What is HTTPS?</a></li>
+        <li><a href="#public-private-key-encryption">Public-Private Key Encryption</a></li>
+        <li><a href="#ssltls-certificate">SSL/TLS Certificate</a></li>
+        <li><a href="#assembling-web-content">Assembling Web Content</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <h1 id="what-happens-after-entering-wwwgooglecom-on-your-browser">What Happens After Entering <code>www.google.com</code> on Your Browser?</h1>
+<p>Have you ever thought about what happens behind the scenes after you enter <code>www.google.com</code> in your browser? How does the browser know you&rsquo;re requesting Google&rsquo;s homepage, and where is google.com located on the internet? To answer these questions, you need to understand how web technology works behind the scenes.</p>
+<h2 id="the-client-server-model">The Client-Server Model</h2>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Client-Server Model" src=" https://miro.medium.com/v2/resize:fit:720/0*kZuLJa3OA0BqtEjv">
+    </div>
+
+    
+</figure></p>
+<p>There are two primary entities involved: <strong>CLIENT</strong> and <strong>SERVER</strong>.</p>
+<ul>
+<li><strong>CLIENT</strong>: This refers to your browser, from where you request a website/resource.</li>
+<li><strong>SERVER</strong>: This is the computer where the requested website/resource is hosted.</li>
+</ul>
+<p>Whenever a client sends a request, either to get data from the server or to post data on the server, the server responds to the request by providing or posting the data with a success or error message.</p>
+<p>A connection is established between these two parties to share data. Now, let&rsquo;s explore how your browser knows the address of the server.</p>
+<h2 id="domain-name-system-dns">Domain Name System (DNS)</h2>
+<p>To understand DNS, think of your phone&rsquo;s contact list. You save a contact by a name, which is mapped to a phone number. The name is easier to remember than the number.</p>
+<p>DNS works similarly. The domain name of any website is mapped to the server&rsquo;s IP address to find where the server is located. DNS acts as a translator, converting domain names into IP addresses so that browsers can load internet resources.</p>
+<p>Learn more about DNS in this video by IBM: <a href="https://www.youtube.com/watch?v=nyH0nYhMW9M&amp;t=1s">Watch Video</a>.</p>
+<p>Once the browser retrieves the server&rsquo;s IP address, communication between the client and server begins to retrieve the desired resources.</p>
+<h2 id="http-hypertext-transfer-protocol">HTTP (HyperText Transfer Protocol)</h2>
+<p>The Hypertext Transfer Protocol is a network protocol that is based on TCP/IP for the communication between client and server. The Basic flow is client sends the request to the server to get the resource and then the server gives the response back to the client. The transfer of data takes place in the form of small segments which are called <strong>packets</strong>.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="TCP Packet" src=" https://miro.medium.com/max/720/0*oXe5go_NVSj441Gd.jpeg">
+    </div>
+
+    
+</figure></p>
+<h3 id="http-headers">HTTP Headers</h3>
+<p>Whenever you request something from the server or the server is responding to you back, HTTP headers are involved in both cases. HTTP Headers are nothing but the metadata for requests and responses. It carries the information about the request and response. HTTP Headers are of mainly two types:</p>
+<ul>
+<li><strong>Request Headers</strong>: Carry information about the client’s request.
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="HTTP Request Headers" src=" https://miro.medium.com/proxy/0*DU0ACcNb9CN35_uW.png">
+    </div>
+
+    
+</figure></li>
+<li><strong>Response Headers</strong>: Carry information about the server’s response.
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="HTTP Response Headers" src=" https://miro.medium.com/max/640/1*RK8k7_CLo6TqoPYczMvk4w.png">
+    </div>
+
+    
+</figure></li>
+</ul>
+<h3 id="http-request-methods">HTTP Request Methods</h3>
+<p>Look at the first line of the above example of a request header, a method is GET defined which means that you are requesting something from the server.</p>
+<p>There are mainly four types of HTTP methods:</p>
+<ul>
+<li><strong>GET</strong>: To retrieve data from the server.</li>
+<li><strong>POST</strong>: To send data to the server.</li>
+<li><strong>PUT</strong>: To update data on the server.</li>
+<li><strong>DELETE</strong>: To delete data from the server.\</li>
+</ul>
+<p>There are other methods also but we generally use the above four. You can see the complete list <!-- raw HTML omitted -->here<!-- raw HTML omitted --></p>
+<h3 id="http-status-codes">HTTP Status Codes</h3>
+<p>HTTP status code shows if the request is fulfilled by the server or not. If it is fulfilled, the server responds with a success status code otherwise it responds with a specific error code.</p>
+<p>All the status codes are clubbed together in 5 different subgroups:</p>
+<ol>
+<li><strong>Informational</strong>: (100–199)</li>
+<li><strong>Successful</strong>: (200–299)</li>
+<li><strong>Redirection</strong>: (300–399)</li>
+<li><strong>Client Error</strong>: (400–499)</li>
+<li><strong>Server Error</strong>: (500–599)</li>
+</ol>
+<h3 id="http-request-and-response-body">HTTP Request and Response Body</h3>
+<ul>
+<li><strong>Request Body</strong>: Used to send data from the client to the server, such as submitting a form.</li>
+<li><strong>Response Body</strong>: Used to receive data from the server.</li>
+</ul>
+<h2 id="https-hypertext-transfer-protocol-secure">HTTPS (HyperText Transfer Protocol Secure)</h2>
+<p>The main issue of using HTTP is security. Data packets are not encrypted while transmitting and therefore attackers can quickly get access to your data by stealing data packets with a MITM attack. HTTPS is used instead of HTTP to avoid these things.</p>
+<h3 id="what-is-https">What is HTTPS?</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="HTTPS Protocol" src=" https://miro.medium.com/max/720/1*ItKgwGP5_8wB6_IAtPQ0iA.png">
+    </div>
+
+    
+</figure></p>
+<p><strong>HTTPS</strong> (HyperText Transfer Protocol Secure) is a protocol built over HTTP with security enhancements. Cryptographic principles are introduced in HTTPS so that you can freely transmit data packets without any security issues. The protocol which is used by HTTPS is TLS ( Transport Layer Security ).</p>
+<p>To understand what is TLS and how TLS handshake works, we need to know about public-private key encryption.</p>
+<h3 id="public-private-key-encryption">Public-Private Key Encryption</h3>
+<p>Public keys are used to encrypt sensitive data and anyone can use this to encrypt data but Private keys are for the decryption of encrypted data only receivers has access to this only receiver can decrypt the data. So when you visit <code>https://www.google.com</code>, google sends you their public key which is signed by a verified certificate authority ( in this case, google itself ), and then your browser encrypts the data packets with google&rsquo;s public key so that only google can decrypt data packets.</p>
+<p>So, in short:</p>
+<ul>
+<li><strong>Public Key</strong>: Used to encrypt sensitive data, and anyone can use it.</li>
+<li><strong>Private Key</strong>: Used for decryption, and only the intended receiver has access to it.</li>
+</ul>
+<p>When you visit <code>https://www.google.com</code>, Google sends its public key, which is signed by a verified certificate authority (in this case, Google itself). Your browser encrypts data packets using Google’s public key, ensuring only Google can decrypt them.</p>
+<h3 id="ssltls-certificate">SSL/TLS Certificate</h3>
+<p>If you see the green lock icon in your browser, it means the connection is secured with HTTPS, ensuring that data is transmitted securely.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="SSL Certificate Example" src=" https://miro.medium.com/max/640/1*WnXhJljZ8QHOTkNkXht3Bw.png">
+    </div>
+
+    
+</figure></p>
+<h3 id="assembling-web-content">Assembling Web Content</h3>
+<p>After securing the connection and receiving the data packets, your browser assembles an HTML document along with CSS and JavaScript files to render the website&rsquo;s main content.</p>
+<hr>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+      <p>
+      Reach out to me at <a href="mailto:hi.prajjwalkapoor@gmail.com">hi.prajjwalkapoor@gmail.com</a>
+    </p>
+    
+    
+    
+
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>
